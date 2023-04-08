@@ -6,12 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 
 
 class Adapter(private val data: List<CardInfo>) : RecyclerView.Adapter<Adapter.viewHolder>() {
-
 
 
     class viewHolder (itemView: View) : RecyclerView.ViewHolder(itemView){

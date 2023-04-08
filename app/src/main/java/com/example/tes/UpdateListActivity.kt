@@ -6,20 +6,14 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
-import androidx.room.Room
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
+
 
 class UpdateListActivity:AppCompatActivity() {
-    private lateinit var database: myDatabase
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_updatelist)
 
-        database= Room.databaseBuilder(
-            applicationContext,myDatabase::class.java, "To_Do"
-        ).build()
 
         val etTaskName = findViewById<EditText>(R.id.etTaskName)
         val etDescription = findViewById<EditText>(R.id.etDescription)
